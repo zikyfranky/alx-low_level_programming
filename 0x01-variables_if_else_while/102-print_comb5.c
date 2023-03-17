@@ -17,7 +17,7 @@ int main(void)
 			if (num1 == num2)
 				continue;
 
-			putchar(48 + (num1 % 10));
+			putchar(48 + (num1 / 10));
 			putchar(48 + (num1 % 10));
 			putchar(' ');
 			putchar(48 + (num2 / 10));
