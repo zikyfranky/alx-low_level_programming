@@ -12,7 +12,7 @@ int main(void)
 
 	for (num = 0; num <  10; num++)
 	{
-		putchar(48 + num); /** 48 is the ASCII code for 0 */
+		putchar(48 + (num % 10)); /** 48 is the ASCII code for 0 */
 
 		if (num != 9)
 		{
