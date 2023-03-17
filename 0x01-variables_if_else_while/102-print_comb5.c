@@ -12,7 +12,7 @@ int main(void)
 
 	for (num1 = 0; num1 <  99; num1++) /** Ignore 9 as 90 and 09 are same */
 	{
-		for (num2 = 0; num2 <  99; num2++)
+		for (num2 = num1; num2 <  99; num2++)
 		{
 			if (num1 == num2)
 				continue;
