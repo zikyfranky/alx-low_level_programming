@@ -18,7 +18,7 @@ int main(void)
 		num1  = num2;
 		num2 = sum;
 
-		printf("%s", count == 49 ? "\n" : ",");
+		printf("%s", count == 49 ? "\n" : ", ");
 	}
 
 	return (0);
