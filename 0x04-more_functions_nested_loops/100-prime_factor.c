@@ -9,7 +9,7 @@
 
 int main(void)
 {
-long long i, n = 612852475143;
+unsigned long i, n = 612852475143;
 
 for (i = 2; i <= sqrt(n); i++)
 {
