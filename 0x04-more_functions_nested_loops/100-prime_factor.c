@@ -21,7 +21,7 @@ n /= i;
 
 if (n > 1)
 {
-printf("%lld\n", n);
+printf("%lu\n", n);
 }
 
 return (0);
