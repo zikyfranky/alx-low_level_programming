@@ -1,4 +1,4 @@
-#include "main.h"
+#include <string.h>
 
 /**
  * print_rev - Takes a string and prints it backwards to stdout
@@ -9,7 +9,7 @@
 
 void print_rev(char *str)
 {
-	int len = _strlen(str);
+	int len = strlen(str);
 	int i;
 
 	for (i = len - 1; i >= 0; i--)
