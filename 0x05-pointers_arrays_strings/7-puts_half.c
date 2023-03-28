@@ -15,7 +15,7 @@ void puts_half(char *str)
 	/*"Hell" -> 4/2 -> 2 -> "ll"*/
 	int startFrom = len % 2 == 0 ? len / 2 : (len - 1) / 2;
 
-	for (i = startFrom; i < len; i += 2)
+	for (i = startFrom; i < len; i++)
 	{
 		_putchar(str[i]);
 	}
