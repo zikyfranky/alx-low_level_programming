@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _puts2 - Takes a string and prints it (skipping every 2 characters)
+ * puts2 - Takes a string and prints it (skipping every 2 characters)
  *
  * @str: The string to print out
  *
