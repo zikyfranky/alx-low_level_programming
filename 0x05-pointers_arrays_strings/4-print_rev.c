@@ -1,4 +1,5 @@
 #include <string.h>
+#include "main.h"
 
 /**
  * print_rev - Takes a string and prints it backwards to stdout
