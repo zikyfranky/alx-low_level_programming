@@ -31,7 +31,7 @@ char *cap_string(char *s)
 			}
 
 			char prevChar = s[i - 1];
-			/*Search if prechar is a separator*/
+			/*Search if prevChar is a separator*/
 			if (strchr(seprators, prevChar) != NULL)
 			{
 				s[i] -= 32;
