@@ -1,16 +1,23 @@
-#include <string.h>
+#include <stdio.h>
 
-/**
- * _strcat - Appends @src to @dest, overweiting the \0 and
- *			then adding it at the very end.
- *
- * @dest: String to be modified
- * @src: String to append to @dest
- *
- * Return: Pointer to the resulting string @dest
- */
-
-char *_strcat(char *dest, char *src)
+int main(void)
 {
-	return (strcat(dest, src));
+	int n;
+	int a[5];
+	int *p;
+
+	a[2] = 1024;
+	p = &n;
+	/*
+	 * write your line of code here...
+	 * Remember:
+	 * - you are not allowed to use a
+	 * - you are not allowed to modify p
+	 * - only one statement
+	 * - you are not allowed to code anything else than this line of code
+	 */
+	*(p + 2) = 98;
+	/* ...so that this prints 98\n */
+	printf("a[2] = %d\n", a[2]);
+	return (0);
 }
