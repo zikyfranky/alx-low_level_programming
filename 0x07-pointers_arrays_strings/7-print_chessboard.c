@@ -1,4 +1,4 @@
-#include <string.h>
+#include "main.h"
 
 /**
  * print_chessboard - Prints the current state of the chessboard
