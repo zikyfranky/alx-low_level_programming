@@ -1,31 +1,20 @@
 
 /**
- * _sqrt_helper - Computes the natural square root of
- * a number between low and high.
- * @n: The number to compute the natural square root of.
- * @low: The low end of the range of numbers to search
- * for the natural square root.
- * @high: The high end of the range of numbers to search
- * for the natural square root.
- *
- * Return: If n has a natural square root between low and high,
- * the natural square root of n. Otherwise, -1.
+ * _sqrt_helper - get the natural square root of a number
+ * @n: number to calculate the square root of
+ * @c: iteration
+ * Return: the resulting square root
  */
-int _sqrt_helper(int n, int low, int high)
+int _sqrt_helper(int n, int c)
 {
-	int mid;
-
-	if (low > high)
-		return (-1);
-
-	mid = (low + high) / 2;
-
-	if (mid * mid == n)
-		return (mid);
-	else if (mid * mid > n)
-		return (_sqrt_helper(n, low, mid - 1));
-	else
-		return (_sqrt_helper(n, mid + 1, high));
+	if (c % (n / c) == 0)
+	{
+		if (c * (n / c) == n)
+			return (c);
+		else
+			return (-1);
+	}
+	return (0 + _sqrt_helper(n, c + 1));
 }
 
 /**
@@ -39,8 +28,11 @@ int _sqrt_helper(int n, int low, int high)
 
 int _sqrt_recursion(int n)
 {
-	if (n == 0 || n == 1)
-		return (n);
-
-	return (_sqrt_helper(n, 1, n));
+	if (n == 1)
+		return (1);
+	if (n == 0)
+		return (0);
+	if (n < 0)
+		return (-1);
+	return (_sqrt_helper(n, 2));
 }
