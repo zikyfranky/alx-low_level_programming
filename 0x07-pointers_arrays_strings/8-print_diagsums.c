@@ -13,7 +13,7 @@
 void print_diagsums(int *a, int size)
 {
 	int i;
-	int sum = 0, sum1 = 0;
+	unsigned int sum = 0, sum1 = 0;
 
 	for (i = 0; i < size; i++)
 	{
@@ -36,7 +36,7 @@ void print_diagsums(int *a, int size)
 		 * Sum would be a[0] + a[4] + a[8] -> 1 + 5 + 9 -> 15
 		 * Sum1 would be a[2] + a[4] + a[6] -> 3 + 5 + 7 -> 15
 		 */
-		int first_diagonal_index = (size * i) + 1;
+		int first_diagonal_index = (size * i) + i;
 		int second_diagonal_index = (size * (i + 1)) - (i + 1);
 
 		sum += a[first_diagonal_index];
