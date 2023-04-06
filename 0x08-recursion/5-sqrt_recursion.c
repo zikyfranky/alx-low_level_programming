@@ -1,19 +1,3 @@
-/**
- * _sqrt_recursion - Prints the square root of @n
- *
- * @n: Number to get square root of
- *
- * Return: If n has a natural square root, the natural square root of @n
- * Otherwise, -1
- */
-
-int _sqrt_recursion(int n)
-{
-	if (n == 0 || n == 1)
-		return (n);
-
-	return (_sqrt_helper(n, 1, n));
-}
 
 /**
  * _sqrt_helper - Computes the natural square root of
@@ -42,4 +26,21 @@ int _sqrt_helper(int n, int low, int high)
 		return (_sqrt_helper(n, low, mid - 1));
 	else
 		return (_sqrt_helper(n, mid + 1, high));
+}
+
+/**
+ * _sqrt_recursion - Prints the square root of @n
+ *
+ * @n: Number to get square root of
+ *
+ * Return: If n has a natural square root, the natural square root of @n
+ * Otherwise, -1
+ */
+
+int _sqrt_recursion(int n)
+{
+	if (n == 0 || n == 1)
+		return (n);
+
+	return (_sqrt_helper(n, 1, n));
 }
