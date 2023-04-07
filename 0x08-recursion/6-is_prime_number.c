@@ -15,7 +15,7 @@ int _check_prime(int n, int prev)
 	if (prev == 1) /*n is 2 at this point*/
 		return (1);
 
-	if (n % prev == 0 && n > 0)
+	if (n % prev == 0 && prev > 0)
 		return (0);
 
 	return (_check_prime(n, prev - 1));
