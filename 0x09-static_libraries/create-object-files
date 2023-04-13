@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# for f in "./*.c"
-# do
 # Together, these options tell gcc to compile the source code into an optimized object file with debugging information included. The resulting object file can then be linked with other object files and libraries to create an executable program.
-# gcc -g -O -c $f
-# done
-
-gcc -c *.c
+gcc -g -O -c *.c
+# gcc -c *.c
