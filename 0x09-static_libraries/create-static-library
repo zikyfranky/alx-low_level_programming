@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Name of the archive file
+ARCHIVE_NAME="libmy.a"
+
+# List of object files to include in the archive
+OBJECT_FILES=(*.o)
+
+# Create the archive - s command so as to index it
+ar rcs $ARCHIVE_NAME ${OBJECT_FILES[@]}
