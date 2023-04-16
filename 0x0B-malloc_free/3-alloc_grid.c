@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * alloc_grid - Creates a 2 dimensional grid using @width and @height
@@ -19,7 +18,7 @@ int **alloc_grid(int width, int height)
 	}
 
 	/*Create memory needed for the height */
-	array = (int **)calloc(height, sizeof(int *));
+	array = (int **)malloc(height * sizeof(int *));
 
 	if (array == NULL)
 	{
@@ -28,7 +27,7 @@ int **alloc_grid(int width, int height)
 
 	for (i = 0; i < height; i++)
 	{
-		array[i] = (int *)calloc(width, sizeof(int));
+		array[i] = (int *)malloc(width * sizeof(int));
 
 		if (array[i] == NULL)
 		{
@@ -39,6 +38,11 @@ int **alloc_grid(int width, int height)
 			/*Free all memory*/
 			free(array);
 			return (NULL);
+		}
+
+		for (l = 0; l < width; l++)
+		{
+			array[i][l] = 0;
 		}
 	}
 
