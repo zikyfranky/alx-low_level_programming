@@ -11,11 +11,11 @@
 
 int **alloc_grid(int width, int height)
 {
-	int **array, i;
+	int **array, i, l;
 
 	if (width <= 0 || height <= 0)
 	{
-		return NULL;
+		return (NULL);
 	}
 
 	/*Create memory needed for the height */
@@ -23,7 +23,7 @@ int **alloc_grid(int width, int height)
 
 	if (array == NULL)
 	{
-		return NULL;
+		return (NULL);
 	}
 
 	for (i = 0; i < height; i++)
@@ -32,7 +32,14 @@ int **alloc_grid(int width, int height)
 
 		if (array[i] == NULL)
 		{
-			return NULL;
+			/*Free all memory*/
+			free(array);
+
+			for (l = 0; l < i; l++)
+			{
+				free(array[l]);
+			}
+			return (NULL);
 		}
 	}
 
