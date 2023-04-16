@@ -32,13 +32,12 @@ int **alloc_grid(int width, int height)
 
 		if (array[i] == NULL)
 		{
-			/*Free all memory*/
-			free(array);
-
-			for (l = 0; l <= i; l++)
+			for (l = 0; l < i; l++)
 			{
 				free(array[l]);
 			}
+			/*Free all memory*/
+			free(array);
 			return (NULL);
 		}
 	}
