@@ -11,13 +11,13 @@
 
 char *create_array(unsigned int size, char c)
 {
+	char *array = (char *)malloc(size * sizeof(char));
+
 	/*Handle the case where size is not valid*/
 	if (size < 1)
 	{
 		return (NULL);
 	}
-
-	char *array = (char *)malloc(size * sizeof(char));
 
 	/*Only do initialization if allocation worked*/
 	if (array != NULL)
