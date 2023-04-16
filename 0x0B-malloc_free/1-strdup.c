@@ -10,8 +10,17 @@
 
 char *_strdup(char *str)
 {
-	int len = strlen(str);
-	char *array = (char *)malloc((len + 1) * sizeof(char));
+	int len;
+	char *array;
+
+	/*Handle the case where @str is null*/
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+
+	len = strlen(str);
+	array = (char *)malloc((len + 1) * sizeof(char));
 
 	/*Only do initialization if allocation worked*/
 	if (array != NULL)
