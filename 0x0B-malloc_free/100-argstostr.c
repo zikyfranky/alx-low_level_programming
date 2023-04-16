@@ -1,13 +1,12 @@
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 
 /**
  * argstostr - Concatenate all arguments and seperate by '\n'
  * @ac: Count of arguments
  * @av: Arguments array
  *
- * Return: NULL on failure and Pointer to new string non success
+ * Return: NULL on failure and Pointer to new string on success
  */
 
 char *argstostr(int ac, char **av)
