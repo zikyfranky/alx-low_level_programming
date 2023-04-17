@@ -21,10 +21,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/*Handle the case where @s2 is null*/
 	len2 = s2 == NULL ? 0 : strlen(s2);
 
-	if (n < (unsigned)len2)
-	{
+	if (n < (unsigned int)len2)
 		len2 = n;
-	}
 	array = malloc((len1 + len2 + 1) * sizeof(char));
 
 	/*Only do initialization if allocation worked*/
@@ -49,29 +47,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 				i++;
 			}
 		}
-
 		/*Add the null terminator*/
 		array[i] = '\0';
 	}
 
 	return (array);
-}
-
-#include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	char *concat;
-
-	concat = string_nconcat("Best ", "School !!!", 6);
-	printf("%s\n", concat);
-	free(concat);
-	return (0);
 }
