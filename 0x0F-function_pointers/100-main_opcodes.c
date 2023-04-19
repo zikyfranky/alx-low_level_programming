@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "3-calc.h"
 
 /**
  * main - Entry for the main program
@@ -12,23 +11,29 @@
 
 int main(int argc, char *argv[])
 {
-	int (*op)(int, int);
+	int num_of_bytes, i;
+	char *arr;
 
-	if (argc != 4)
+	if (argc != 2)
 	{
 		printf("Error\n");
-		exit(98);
+		exit(1);
 	}
 
-	op = get_op_func(argv[2]);
+	num_of_bytes = atoi(argv[1]);
 
-	if (!op)
+	if (num_of_bytes < 0)
 	{
 		printf("Error\n");
-		exit(99);
+		exit(2);
 	}
 
-	printf("%d\n", op(atoi(argv[1]), atoi(argv[3])));
+	arr = (char *)main;
+
+	for (i = 0; i < num_of_bytes; i++)
+	{
+		(num_of_bytes - 1) == i ? printf("%02hhx\n", arr[i]) : printf("%02hhx ", arr[i]);
+	}
 
 	return (0);
 }
