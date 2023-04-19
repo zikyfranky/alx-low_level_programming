@@ -32,7 +32,11 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < num_of_bytes; i++)
 	{
-		(num_of_bytes - 1) == i ? printf("%02hhx\n", arr[i]) : printf("%02hhx ", arr[i]);
+		printf("%02hhx", arr[i]);
+		if ((num_of_bytes - 1) == i)
+			printf("\n");
+		else
+			printf(" ");
 	}
 
 	return (0);
