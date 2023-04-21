@@ -2,20 +2,20 @@
 #include <stdio.h>
 
 /**
- * sum_them_all - Sums all arguments passed to the function
- * @n: This is the number of arguments that should be expected
+ * print_strings - Prints all arguments
+ * @separator: String to separate arguments
+ * @n: Number of arguments
  *
  * Return: Always 0.
  */
 
-int sum_them_all(const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
-	int sum = 0;
 	unsigned int i;
 	va_list args;
 
-	if (n == 0)
-		return (0);
+	if (separator == NULL)
+		return;
 
 	/**
 	 * man stdarg -> Docs
@@ -27,9 +27,19 @@ int sum_them_all(const unsigned int n, ...)
 
 	va_start(args, n);
 	for (i = 0; i < n; i++)
-		sum += va_arg(args, int);
+	{
+		char *v = va_arg(args, char *);
+
+		if (v == NULL)
+			printf("(nil)");
+		else
+			printf("%s", v);
+
+		if (i < (n - 1))
+			printf("%s", separator);
+		else
+			printf("\n");
+	}
 
 	va_end(args);
-
-	return (sum);
 }
