@@ -16,8 +16,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	if (separator == NULL)
 		separator = "";
 
-	// If separator is NULL, don’t print it
-
 	/**
 	 * man stdarg -> Docs
 	 * va_start -> copies start point of @n to va_list args
