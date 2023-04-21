@@ -14,7 +14,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list args;
 
 	if (separator == NULL)
-		return;
+		separator = "";
+
+	// If separator is NULL, don’t print it
 
 	/**
 	 * man stdarg -> Docs
