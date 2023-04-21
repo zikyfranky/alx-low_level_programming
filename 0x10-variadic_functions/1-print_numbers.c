@@ -2,14 +2,13 @@
 #include <stdio.h>
 
 /**
- * print_strings - Prints all arguments
+ * print_numbers - Prints all arguments
  * @separator: String to separate arguments
  * @n: Number of arguments
  *
- * Return: Always 0.
  */
 
-void print_strings(const char *separator, const unsigned int n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list args;
@@ -28,12 +27,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_start(args, n);
 	for (i = 0; i < n; i++)
 	{
-		char *v = va_arg(args, char *);
-
-		if (v == NULL)
-			printf("(nil)");
-		else
-			printf("%s", v);
+		printf("%d", va_arg(args, int));
 
 		if (i < (n - 1))
 			printf("%s", separator);
