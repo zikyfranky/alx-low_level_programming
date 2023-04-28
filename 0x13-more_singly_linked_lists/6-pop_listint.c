@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * pop_listint - Frees the head and returns it's @n value
+ * pop_listint - Deletes the head of the list
  *
  * @head: Head Node
  *
