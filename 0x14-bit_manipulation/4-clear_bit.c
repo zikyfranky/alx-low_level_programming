@@ -24,7 +24,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	 * Only clear the bit if it is set
 	 */
 	if ((*n >> index) & 1)
-		*n += p;
+		*n -= p;
 
 	return (1);
 }
