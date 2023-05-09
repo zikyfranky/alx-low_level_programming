@@ -62,9 +62,7 @@ int main(int argc, char *argv[])
 	source = open(argv[1], O_RDONLY);
 	r = read(source, buffer, 1024);
 	dest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-
-	do
-	{
+	do {
 		if (source == -1 || r == -1)
 		{
 			dprintf(STDERR_FILENO,
@@ -84,7 +82,6 @@ int main(int argc, char *argv[])
 
 		r = read(source, buffer, 1024);
 		dest = open(argv[2], O_WRONLY | O_APPEND);
-
 	} while (r > 0);
 
 	free(buffer);
